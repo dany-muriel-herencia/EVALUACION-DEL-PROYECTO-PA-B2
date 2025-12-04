@@ -1,0 +1,49 @@
+# Project: Proyecto
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o utils/Console.o model/Usuario.o model/Administrador.o controller/AppController.o model/Empleado.o model/Recepcionista.o model/Limpieza.o
+LINKOBJ  = main.o utils/Console.o model/Usuario.o model/Administrador.o controller/AppController.o model/Empleado.o model/Recepcionista.o model/Limpieza.o
+LIBS     = -L"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/lib" -L"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/include" -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/include" -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Embarcadero C++/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Proyecto.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = D:\Embarcadero C++\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+utils/Console.o: utils/Console.cpp
+	$(CPP) -c utils/Console.cpp -o utils/Console.o $(CXXFLAGS)
+
+model/Usuario.o: model/Usuario.cpp
+	$(CPP) -c model/Usuario.cpp -o model/Usuario.o $(CXXFLAGS)
+
+model/Administrador.o: model/Administrador.cpp
+	$(CPP) -c model/Administrador.cpp -o model/Administrador.o $(CXXFLAGS)
+
+controller/AppController.o: controller/AppController.cpp
+	$(CPP) -c controller/AppController.cpp -o controller/AppController.o $(CXXFLAGS)
+
+model/Empleado.o: model/Empleado.cpp
+	$(CPP) -c model/Empleado.cpp -o model/Empleado.o $(CXXFLAGS)
+
+model/Recepcionista.o: model/Recepcionista.cpp
+	$(CPP) -c model/Recepcionista.cpp -o model/Recepcionista.o $(CXXFLAGS)
+
+model/Limpieza.o: model/Limpieza.cpp
+	$(CPP) -c model/Limpieza.cpp -o model/Limpieza.o $(CXXFLAGS)
