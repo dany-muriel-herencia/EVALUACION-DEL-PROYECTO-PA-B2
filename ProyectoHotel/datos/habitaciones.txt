@@ -1,0 +1,5 @@
+101|Simple|50|1
+102|Doble|80|1
+103|Suite|150|1
+104|Suite Presidencial|250|1
+105|Simple|50|1

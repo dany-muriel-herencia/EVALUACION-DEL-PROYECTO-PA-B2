@@ -1,0 +1,3 @@
+Desayuno Incluido|100|Alimento|15
+WiFi Premium|100|Conectividad|10
+Servicio de Limpieza|100|Servicio|20
